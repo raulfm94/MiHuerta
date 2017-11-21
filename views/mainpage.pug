@@ -1,0 +1,67 @@
+extends layout
+
+block content
+	h1 #{title}
+	.row
+		.right_col(role='main')
+			.col-sm-4
+				.row
+					ul.list-group
+						each contact, i in contacts
+							li.list-group-item
+								span= contact.contactname
+								br
+								span
+									span= contact.profession
+									br
+								span
+									span= contact.address
+									br
+								span
+									span= contact.phone
+									br
+								span
+									span= contact.email
+									br
+								.clearfix
+			.col-sm-4
+				.row
+					ul.list-group
+						each event, i in events
+							li.list-group-item
+								span= event.eventname
+								br
+								span
+									span= event.eventtype
+									br
+								span
+									span= event.eventdate
+									br
+								span
+									span= event.eventaddress
+									br
+								span
+									span= event.eventstatus
+									br
+								.clearfix
+			.col-sm-4
+				.row
+					ul.list-group
+						each crop, i in crops
+							li.list-group-item
+								span= crop.cropname
+								br
+								span
+									span= crop.croptype
+									br
+								span
+									span= crop.cropsize
+									br
+								span
+									span= crop.cropstatus
+									br
+								span
+									span= crop.address
+									br
+								.clearfix
+	p #{body1}

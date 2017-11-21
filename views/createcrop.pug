@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	h1 #{title}
+	form(method="POST", action='/createcrop')
+		#form-group
+			label Crop Name:
+			input.form-control(name='cropname', type='text')
+		#form-group
+			label Crop Type:
+			input.form-control(name='croptype', type='text')
+		#form-group
+			label Crop Size:
+			input.form-control(name='cropsize', type='text')
+		#form-group
+			label Crop Status:
+			input.form-control(name='cropstatus', type='text')
+		#form-group
+			label Crop Address:
+			input.form-control(name='cropaddress', type='text')
+		input.btn.btn-primary(type='submit',value='Create Crop')

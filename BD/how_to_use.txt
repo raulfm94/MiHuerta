@@ -1,0 +1,13 @@
+// Install pymongo with:
+python -m easy_install pymongo
+// Start MongoDB
+mongo
+mongod
+// Edit data_to_db.py line to connect to the correct mongo
+// Run python
+python data_to_db.py
+// In mongo check:
+use web
+db.web_users.find().pretty()
+// Should see json file of users in MongoDB
+// End

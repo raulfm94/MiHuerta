@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	h1 #{title}
+	form(method="POST", action='/createevent')
+		#form-group
+			label Event Name:
+			input.form-control(name='eventname', type='text')
+		#form-group
+			label Event Type:
+			input.form-control(name='eventtype', type='text')
+		#form-group
+			label Event Description:
+			textarea.form-control(name='eventdescription')
+		#form-group
+			label Event Date:
+			input.form-control(name='eventdate', type='text')
+		#form-group
+			label Event Address:
+			input.form-control(name='eventaddress', type='text')
+		#form-group
+			label Event Status:
+			input.form-control(name='eventstatus', type='text')
+		input.btn.btn-primary(type='submit',value='Create Event')

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	h1 #{title}
+	form(method="POST", action='/createcontact')
+		#form-group
+			label Contact Name:
+			input.form-control(name='contactname', type='text')
+		#form-group
+			label Profession:
+			input.form-control(name='profession', type='text')
+		#form-group
+			label Email:
+			input.form-control(name='email', type='text')
+		#form-group
+			label Phone:
+			input.form-control(name='phone', type='text')
+		#form-group
+			label Address:
+			input.form-control(name='address', type='text')
+		input.btn.btn-primary(type='submit',value='Create Contact')
